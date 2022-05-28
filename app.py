@@ -22,12 +22,12 @@ def pagina1():
 #*******************************************     CODIGO    ***********************************************************
 #*********************************************************************************************************************
 import re, collections
-import numpy as np ####
-import nltk ####
+import numpy as np
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 nltk.download('stopwords')
-import pandas as pd ####
+import pandas as pd
 
 #url = "https://raw.githubusercontent.com/rebecau/ML_PROYECTO1/main/%5BUCI%5D%20AAAI-14%20Accepted%20Papers%20-%20Papers.csv"
 url = "https://raw.githubusercontent.com/rebecau/ML_PROYECTO1/main/%5BUCI%5D%20AAAI-14%20Accepted%20Papers%20-%20Papers.csv"
