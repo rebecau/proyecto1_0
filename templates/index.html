@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\css\index.css">
+    <title>Say Hello</title>
+</head>
+<body>
+    <img src="https://images4.alphacoders.com/243/thumb-1920-243888.jpg" alt="foo">
+    <br>
+    <form action="pagina1" method="post">
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="pagina1"> <!-- id pagina1 -->
+    </form>
+</body>
+</html>
