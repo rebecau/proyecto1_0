@@ -13,7 +13,7 @@ p{
 img{
     margin: 60px 0  30px 0;
     width: 430px;
-    height: 120px;
+    height: 220px;
 }
 
 input{
@@ -43,56 +43,3 @@ input:focus{
     background-color: blue;
     cursor: pointer;
 }
-
-footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:15%;   /* Height of the footer */
-
-    text-align: center;
-    padding: 3px;
-    background-color: rgb(122, 189, 233);
-    color: white;
-}
-footer a{
-    color: white;
-}
-
-/* *************************************** tab ********************/
-/* Style the buttons inside the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-  
-
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }

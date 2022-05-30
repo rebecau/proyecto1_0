@@ -39,9 +39,9 @@ from scipy.cluster.hierarchy import linkage, fcluster
 url = "https://raw.githubusercontent.com/rebecau/ML_PROYECTO1/main/%5BUCI%5D%20AAAI-14%20Accepted%20Papers%20-%20Papers.csv"
 df = pd.read_csv(url)
 
-title = df.iloc[:10, 0]
-keyword = df.iloc[:10, 3]
-abstract = df.iloc[:10, 5]
+title = df.iloc[:180, 0]
+keyword = df.iloc[:180, 3]
+abstract = df.iloc[:180, 5]
 
 def Normalizacion(Documentos):
   for i in range(len(Documentos)):#NORMALIZACION ELIMINACION DE CARACTERES ESPECIALES Y MAYUSCULA
@@ -308,3 +308,48 @@ def Similitudes(d1,d2,d3):
   return similitud
 
 sim = Similitudes(m_d1,m_d2,m_d3)
+
+#for i in range(len(sim)):
+  #print(sim[i])
+sns.heatmap(sim)
+plt.title("Matriz de Confusión")
+plt.show()
+print()
+cluster = linkage(sim, "ward")
+dendogram = sch.dendrogram(cluster)
+plt.title("Dendograma")
+plt.show()
+print()
+m_d1 = m_d1.flatten()
+m_d2 = m_d2.flatten()
+m_d3 = m_d3.flatten()
+
+fig, ax = plt.subplots(1, 1, figsize=(6, 3.84))
+ax.scatter(
+    x = m_d1,
+    y = m_d2, 
+    c = 'blue',
+    marker    = 'o',
+    edgecolor = 'black', 
+)
+ax.set_title('MDS - Titulos y Palabras Clave');
+
+fig, ax = plt.subplots(1, 1, figsize=(6, 3.84))
+ax.scatter(
+    x = m_d1,
+    y = m_d3, 
+    c = 'green',
+    marker    = 'o',
+    edgecolor = 'black', 
+)
+ax.set_title('MDS - Titulos y Resumenes');
+
+fig, ax = plt.subplots(1, 1, figsize=(6, 3.84))
+ax.scatter(
+    x = m_d2,
+    y = m_d3, 
+    c = 'red',
+    marker    = 'o',
+    edgecolor = 'black', 
+)
+ax.set_title('MDS - Palabras Clave y Resumenes');

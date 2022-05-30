@@ -10,59 +10,17 @@
 <body>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png/640px-Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png" alt="foo">
     <br>
-    <h1><center>MACHINE LEARNING</center></h1>
+    <h3>Integrantes: </h3>
+    <h6>Rebeca Freire</h6>
     <br>
-    <main>
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'Papers')">Papers</button>
-            <button class="tablinks" onclick="openCity(event, 'Heatmap')">Heatmap</button>
-            <button class="tablinks" onclick="openCity(event, 'Dendogram')">Dendogram</button>
-            <button class="tablinks" onclick="openCity(event, 'MDS')">MDS</button>
-        </div>
-        <div id="Papers" class="tabcontent">
-            <h3>Papers</h3>
-            <p>Papers bla bla bla.</p>
-            {% for message in get_flashed_messages() %}
-                <p>{{message}}</p>
-            {% endfor %}
-            <!-- imprimir el df  del python-->
-        </div>
-
-        <div id="Heatmap" class="tabcontent">
-            <h3>Heatmap</h3>
-            <p>Heatmap bla bla bla.</p>
-            <img src="https://images2.imgbox.com/ef/cb/2YMYgJzs_o.png" alt="heatmap">
-        </div>
-          
-        <div id="Dendogram" class="tabcontent">
-            <h3>Dendogram</h3>
-            <p>Dendogram bla bla bla.</p> 
-        </div>
-          
-        <div id="MDS" class="tabcontent">
-            <h3>MDS</h3>
-            <p>MDS bla bla bla.</p>
-        </div>
-          
-        <script>
-            function openCity(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-        </script>
-    </main>
-    <footer>        
-        <p><a href="https://github.com/rebecau/proyecto1_0">GitHub: Rebeca Freire</a></p>
-        Integrantes: Rebeca Freire - Aracelly Alvarez - Ricardo Villegas
-    </footer>
+    <form action="pagina1" method="post">
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="pagina1"> <!-- id pagina1 -->
+    </form>
 </body>
 </html>
