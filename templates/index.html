@@ -8,19 +8,198 @@
     <title>Proyecto - Machine Learning</title>
 </head>
 <body>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png/640px-Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png" alt="foo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png/640px-Logo_Universidad_Politécnica_Salesiana_del_Ecuador.png" alt="foo" width="430px" height="120px">
     <br>
-    <h3>Integrantes: </h3>
-    <h6>Rebeca Freire</h6>
+    <main>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Papers')">Papers</button>
+            <button class="tablinks" onclick="openCity(event, 'Heatmap')">Heatmap</button>
+            <button class="tablinks" onclick="openCity(event, 'Dendogram')">Dendogram</button>
+            <button class="tablinks" onclick="openCity(event, 'MDS')">MDS</button>
+            <button class="tablinks" onclick="openCity(event, 'Flujograma')">Flujograma</button>
+            <button class="tablinks" onclick="openCity(event, 'MS_Computacion')">MS_Computacion</button>
+            <button class="tablinks" onclick="openCity(event, 'MS_Medicina')">MS_Medicina</button>
+            <button class="tablinks" onclick="openCity(event, 'MS_Ciencias_Exactas')">MS_Ciencias_Exactas</button>
+            <button class="tablinks" onclick="openCity(event, 'MS_Ciencias_Sociales')">MS_Ciencias_Sociales</button>
+        </div>
+        <div id="Papers" class="tabcontent">
+            <h3>Papers</h3>
+            <p>Papers de Ciencias Sociales, Computacion, Medicina, Ciencias Exactas(Matematicas o Fisica) .</p>
+            {% for message in get_flashed_messages() %}
+                <p>{{message}}</p>
+            {% endfor %}
+            <!-- imprimir el df  del python-->
+        </div>
+
+        <div id="Heatmap" class="tabcontent">
+            <h3>Heatmap</h3>
+            <p>Mapa de calor de la matriz de similitud de 197 x 197.</p>
+            <img src="https://images2.imgbox.com/5f/a5/OdHkJRnS_o.png" alt="HEATMAP" width="400px" height="400px">
+        </div>
+          
+        <div id="Dendogram" class="tabcontent">
+            <h3>Dendogram</h3>
+            <p>Dendogram diagrama de datos en forma de árbol que organiza los datos en subcategorías que se van dividiendo.</p> 
+            <img src="https://images2.imgbox.com/d3/a2/3TlfOkln_o.png" alt="DENDOGRAM" width="400px" height="400px">
+        </div>
+          
+        <div id="MDS" class="tabcontent">
+            <h3>MDS</h3>
+            <p>MDS,distancias entre todos los documentos del dataset.</p>
+            <img src="https://images2.imgbox.com/d5/35/sE5IWA5a_o.png" alt="MDS1" width="400px" height="400px">
+            <img src="https://images2.imgbox.com/d2/d9/C5KQUtMM_o.png" alt="MDS2" width="400px" height="400px">
+            <img src="https://images2.imgbox.com/d2/2b/SHXZEwOW_o.png" alt="MDS3" width="400px" height="400px">
+        </div>
+
+        <div id="Flujograma" class="tabcontent">
+            <h3>Flujograma</h3>
+            <p>Flujograma bla bla bla.</p>
+            <img src="" alt="Flujograma" width="400px" height="400px">
+        </div>
+
+        <div id="MS_Computacion" class="tabcontent">
+            <h3>MS_Computacion</h3>
+            <p>MS_Computacion bla bla bla.</p>
+            <center><table>
+                <tr>
+                    <td></td>
+                    <td><b><center>TITULOS</center></b></td>
+                    <td><b><center>KEYWORDS</center></b></td>
+                    <td><b><center>ABSTRACTS</center></b></td>
+                </tr>
+                <tr>
+                    <td>Documento 1</td>
+                    <td><img src="https://images2.imgbox.com/57/2c/TV6U7R53_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/3b/ff/HoP1oMBt_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/10/1b/oMOx1ZS2_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 2</td>
+                    <td><img src="https://images2.imgbox.com/80/fb/HgO3PCzH_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/fa/aa/IGN8uEia_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/64/c1/LLlS239d_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 3</td>
+                    <td><img src="https://images2.imgbox.com/dc/1a/r3Uspngi_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/c6/50/x4iINlXW_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/b3/6a/mUxLDVKd_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+            </table></center>
+        </div>
+
+        <div id="MS_Medicina" class="tabcontent">
+            <h3>MS_Medicina</h3>
+            <p>MS_Medicina bla bla bla.</p>
+            <center><table>
+                <tr>
+                    <td></td>
+                    <td><b><center>TITULOS</center></b></td>
+                    <td><b><center>KEYWORDS</center></b></td>
+                    <td><b><center>ABSTRACTS</center></b></td>
+                </tr>
+                <tr>
+                    <td>Documento 1</td>
+                    <td><img src="https://images2.imgbox.com/2c/89/MOPna5nU_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/dd/03/X2WBVCNr_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/08/a5/LBUE765z_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 2</td>
+                    <td><img src="https://images2.imgbox.com/36/56/HzvbUaf2_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/90/30/0y2MKidX_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/f2/ab/cnXIQaTA_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 3</td>
+                    <td><img src="https://images2.imgbox.com/a3/97/4KHI6rSN_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/74/41/KHJNVTC5_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/92/8e/i7mVgIOD_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+            </table></center>
+        </div>
+
+        <div id="MS_Ciencias_Exactas" class="tabcontent">
+            <h3>MS_Ciencias_Exactas</h3>
+            <p>MS_Ciencias_Exactas bla bla bla.</p>
+            <center><table>
+                <tr>
+                    <td></td>
+                    <td><b><center>TITULOS</center></b></td>
+                    <td><b><center>KEYWORDS</center></b></td>
+                    <td><b><center>ABSTRACTS</center></b></td>
+                </tr>
+                <tr>
+                    <td>Documento 1</td>
+                    <td><img src="https://images2.imgbox.com/ae/fc/lPF6ELjV_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/3a/18/WcW6X1LE_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/b9/a6/r2z2hwYR_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 2</td>
+                    <td><img src="https://images2.imgbox.com/0b/3a/gu9qSWDx_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/e4/f1/r9VrMlWg_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/03/fe/GFS0gvN6_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 3</td>
+                    <td><img src="https://images2.imgbox.com/27/5d/scq80qj3_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/b8/1c/aRVAOryj_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/b8/81/1SF3mUiO_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+            </table></center>
+        </div>
+        <div id="MS_Ciencias_Sociales" class="tabcontent">
+            <h3>MS_Ciencias_Sociales</h3>
+            <p>MS_Ciencias_Sociales bla bla bla.</p>
+            <center><table>
+                <tr>
+                    <td></td>
+                    <td><b><center>TITULOS</center></b></td>
+                    <td><b><center>KEYWORDS</center></b></td>
+                    <td><b><center>ABSTRACTS</center></b></td>
+                </tr>
+                <tr>
+                    <td>Documento 1</td>
+                    <td><img src="https://images2.imgbox.com/9f/1f/syeLiV0S_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/70/30/K0sJ34ta_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/4a/77/kJcgbeMd_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 2</td>
+                    <td><img src="https://images2.imgbox.com/ee/5e/Hr8CdHbU_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/54/39/54Vu2iBb_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/3e/f2/ckHmD4qF_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+                <tr>
+                    <td>Documento 3</td>
+                    <td><img src="https://images2.imgbox.com/9b/07/IWP1vXYg_o.png" alt="TITULOS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/6c/1e/8F25dEt0_o.png" alt="KEYWORDS" width="300px" height="300px"></td>
+                    <td><img src="https://images2.imgbox.com/f5/a0/c53gTznl_o.png" alt="ABSTRACTS" width="300px" height="300px"></td>
+                </tr>
+            </table></center>
+        </div>
+            
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </main>
     <br>
-    <form action="pagina1" method="post">
-        {% for message in get_flashed_messages() %}
-            <p>{{message}}</p>
-        {% endfor %}
-        <br>
-        <input type="text" name="name_input">
-        <br>
-        <input type="submit" value="GREET" id="pagina1"> <!-- id pagina1 -->
-    </form>
+    <footer>        
+        <p><a href="https://github.com/rebecau/proyecto1_0">GitHub: Rebeca Freire</a></p>
+        Integrantes: Rebeca Freire - Aracelly Alvarez - Ricardo Villegas
+    </footer>
 </body>
 </html>

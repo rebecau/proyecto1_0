@@ -8,14 +8,7 @@ app.secret_key = "1234"
 
 @app.route("/home")
 def index():
-    flash("What's your name?")
-    return render_template("index.html")
-
-@app.route("/pagina1", methods=["POST","GET"])
-def pagina1():
-    #flash("Hi "+ str(request.form["name_input"]) + ", great to see you!")
-    flash(d1[0])
-    request.form["name_input"]
+    flash(title)
     return render_template("index.html")
 
 #*********************************************************************************************************************
@@ -36,12 +29,12 @@ from sklearn.datasets import make_blobs
 import scipy.cluster.hierarchy as sch 
 from scipy.cluster.hierarchy import linkage, fcluster
 
-url = "https://raw.githubusercontent.com/rebecau/ML_PROYECTO1/main/%5BUCI%5D%20AAAI-14%20Accepted%20Papers%20-%20Papers.csv"
+url = "https://raw.githubusercontent.com/rebecau/ML_PROYECTO1/main/links0.1.csv"
 df = pd.read_csv(url)
 
-title = df.iloc[:180, 0]
-keyword = df.iloc[:180, 3]
-abstract = df.iloc[:180, 5]
+title = df.iloc[:2, 0]
+keyword = df.iloc[:2, 1]
+abstract = df.iloc[:2, 2]
 
 def Normalizacion(Documentos):
   for i in range(len(Documentos)):#NORMALIZACION ELIMINACION DE CARACTERES ESPECIALES Y MAYUSCULA
@@ -309,10 +302,10 @@ def Similitudes(d1,d2,d3):
 
 sim = Similitudes(m_d1,m_d2,m_d3)
 
-#for i in range(len(sim)):
-  #print(sim[i])
+'''
+
 sns.heatmap(sim)
-plt.title("Matriz de Confusión")
+plt.title("Mapa de Calor")
 plt.show()
 print()
 cluster = linkage(sim, "ward")
@@ -353,3 +346,4 @@ ax.scatter(
     edgecolor = 'black', 
 )
 ax.set_title('MDS - Palabras Clave y Resumenes');
+'''
