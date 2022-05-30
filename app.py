@@ -8,14 +8,7 @@ app.secret_key = "1234"
 
 @app.route("/home")
 def index():
-    flash("What's your name?")
-    return render_template("index.html")
-
-@app.route("/pagina1", methods=["POST","GET"])
-def pagina1():
-    #flash("Hi "+ str(request.form["name_input"]) + ", great to see you!")
-    flash(d1[0])
-    request.form["name_input"]
+    flash(df)
     return render_template("index.html")
 
 #*********************************************************************************************************************
